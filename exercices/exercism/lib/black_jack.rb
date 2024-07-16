@@ -41,4 +41,4 @@ module Blackjack
       "S"
     end
   end
-end  
+end
