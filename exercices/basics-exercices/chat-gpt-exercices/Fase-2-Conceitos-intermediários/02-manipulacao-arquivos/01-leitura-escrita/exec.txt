@@ -1,0 +1,12 @@
+Escreva uma string em um arquivo.
+Escreva uma string em um arquivo.
+Escreva uma string em um arquivo.
+Escreva uma string em um arquivo.
+Escreva uma string em um arquivo.
+Escreva uma string em um arquivo.
+Escreva uma string em um arquivo.
+Escreva uma string em um arquivo.
+Escreva uma string em um arquivo.
+Escreva uma string em um arquivo.
+ESTA E A NOVO LINHA NO FINAL DO ARQUIVO!
+ESTA E A NOVO LINHA NO FINAL DO ARQUIVO!
