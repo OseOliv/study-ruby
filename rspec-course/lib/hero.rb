@@ -5,6 +5,6 @@ class Hero
 
   def initialize
     @weapon = 'sword'
-    @life = 1500
+    @life = 5000
   end
 end
