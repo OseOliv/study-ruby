@@ -1,6 +1,10 @@
+# frozen_string_literal: true
+
 class Hero
-  attr_reader :weapon
+  attr_reader :weapon, :life
+
   def initialize
     @weapon = 'sword'
+    @life = 1500
   end
 end
