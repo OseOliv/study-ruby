@@ -14,3 +14,12 @@ describe Hero do
     expect(hero.life).to be > 1000
   end
 end
+
+describe Hero do
+  context 'quando esta com armadura' do
+    it 'tem 5000 pontos de hp' do
+      hero = Hero.new
+      expect(hero.life).to eq(5000)
+    end
+  end
+end
