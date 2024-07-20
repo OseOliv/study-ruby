@@ -1,6 +1,6 @@
 
 class TwoSum
-  def two_sum(nums, target)
+  def self.two_sum(nums, target)
     hash_num = Hash.new(0)
 
     nums.each_with_index do |num, index|
