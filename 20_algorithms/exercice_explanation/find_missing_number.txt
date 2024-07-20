@@ -1,0 +1,4 @@
+Determina o número total de elementos esperado (N) a partir do tamanho do array.
+Calcula a soma total dos primeiros N números inteiros usando uma fórmula matemática.
+Soma todos os elementos do array.
+Subtrai a soma do array da soma total para encontrar o número que está faltando.
