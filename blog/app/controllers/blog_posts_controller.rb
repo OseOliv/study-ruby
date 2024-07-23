@@ -1,12 +1,9 @@
 class BlogPostsController < ApplicationController
-  before_action :set_blog_post, only: [:show, :edit, :update, :destroy]
+  before_action :set_blog_post, except: [:index, :new, :create]
   def index
     @blog_posts = BlogPost.all
   end
   def show
-   set_blog_post
-  rescue ActiveRecord::RecordNotFound
-    redirect_to root_path
   end
   def new
     @blog_post = BlogPost.new
@@ -20,10 +17,8 @@ class BlogPostsController < ApplicationController
     end
   end
   def edit
-   set_blog_post
   end
   def update
-   set_blog_post
     if @blog_post.update(blog_post_params)
       redirect_to @blog_post
     else
@@ -32,7 +27,6 @@ class BlogPostsController < ApplicationController
   end
 
   def destroy
-   set_blog_post
     @blog_post.destroy
     redirect_to root_path
   end
@@ -41,8 +35,9 @@ class BlogPostsController < ApplicationController
   def blog_post_params
     params.require(:blog_post).permit(:title, :body)
   end
-
   def set_blog_post
     @blog_post = BlogPost.find(params[:id])
+  rescue ActiveRecord::RecordNotFound
+    redirect_to root_path
   end
 end
