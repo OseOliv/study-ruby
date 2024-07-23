@@ -1,0 +1,3 @@
+class BlogPostsController < ApplicationController
+
+end
