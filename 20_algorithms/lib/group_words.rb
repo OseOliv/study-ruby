@@ -1,16 +1,8 @@
 def group_words_by_unique_characters(words)
-  groups = Hash.new { |hash, key| hash[key] = [] }
-
-  words.each do |word|
-    key = word.chars.uniq.sort.join
-    groups[key] << word
+  groups = words.group_by { |word| word.chars.uniq.sort.join }
+  groups.transform_values do |words|
+    words.sort.join(', ')
+  end.transform_keys do |key|
+    groups[key].sort.first
   end
-  
-  result = {}
-  groups.each do |_key, words|
-    sorted_words = words.sort
-    result[sorted_words.first] = sorted_words.join(', ')
-  end
-
-  result
 end
