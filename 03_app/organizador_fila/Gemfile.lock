@@ -1,0 +1,13 @@
+GEM
+  specs:
+    ffaker (2.23.0)
+
+PLATFORMS
+  ruby
+  x86_64-linux
+
+DEPENDENCIES
+  ffaker
+
+BUNDLED WITH
+   2.5.16
