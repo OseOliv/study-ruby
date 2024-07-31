@@ -1,4 +1,4 @@
-require 'expenses'
+require_relative 'expenses'
 
 class Analysis
   attr_accessor :expenses_history, :monthly_budget
@@ -15,8 +15,8 @@ class Analysis
   def monthly_savings
     @expenses_history.map do |month|
       total_expenses = total_expenses_for_month(month)
-      savings = monthly_budget - total_expenses
-      {month: month, savings: savings}
+      savings = @monthly_budget - total_expenses
+      { month: month, savings: savings }
     end
   end
 
@@ -43,6 +43,7 @@ class Analysis
   end
 
   private
+
   def average_expenses(category)
     total = @expenses_history.sum { |month| month[category].to_f }
     (total / @expenses_history.size.to_f).round(2)
