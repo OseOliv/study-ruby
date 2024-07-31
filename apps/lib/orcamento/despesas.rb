@@ -8,4 +8,8 @@ class Expenses
     @food = food
   end
 
+  def total_expenses
+    rent_bill + water_bill + energy_bill + internet_bill
+  end
+
 end
