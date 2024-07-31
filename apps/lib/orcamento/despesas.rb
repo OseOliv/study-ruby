@@ -1,5 +1,6 @@
 class Expenses
   attr_accessor :rent_bill, :water_bill, :energy_bill, :internet_bill, :food
+
   def initialize(rent_bill, water_bill, energy_bill, internet_bill, food)
     @rent_bill = rent_bill
     @water_bill = water_bill
@@ -10,6 +11,15 @@ class Expenses
 
   def total_expenses
     rent_bill + water_bill + energy_bill + internet_bill
+  end
+
+  def display_expenses
+    { rent_bill: rent_bill,
+      water_bill: water_bill,
+      energy_bill: energy_bill,
+      internet_bill: internet_bill,
+      food: food,
+      total: total_expenses }
   end
 
 end
