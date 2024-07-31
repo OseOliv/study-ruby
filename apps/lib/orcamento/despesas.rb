@@ -38,5 +38,4 @@ class Expenses
       'Invalid expense type'
     end
   end
-
 end
