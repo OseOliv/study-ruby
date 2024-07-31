@@ -39,11 +39,12 @@ class Analysis
     if average_expenses[:internet_bill] > 60
       tips << 'Check if you can get a better deal on your internet plan.'
     end
-
     tips
   end
 
-
-
-
+  private
+  def average_expenses(category)
+    total = @expenses_history.sum { |month| month[category].to_f }
+    (total / @expenses_history.size.to_f).round(2)
+  end
 end
