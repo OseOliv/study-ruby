@@ -1,26 +1,19 @@
+# frozen_string_literal: true
+
 class PositiveNegative
-  def rearrange_array(arr)
-    positives = arr.select { |x| x >= 0 }
-    negatives = arr.select { |x| x < 0 }
+  def rearrange(arr)
+    positive = 0
+    negative = 1
 
-    rearranged = []
-    pos_index = 0
-    neg_index = 0
+    loop do
+      positive += 2 while positive < arr.size && arr[positive] >= 0
+      negative += 2 while negative < arr.size && arr[negative] <= 0
+      break unless positive < arr.size && negative < arr.size
 
-    arr.each_with_index do |_, index|
-      if index.even?
-        rearranged << positives[pos_index] if pos_index < positives.size
-        pos_index += 1 if pos_index < positives.size
-      else
-        rearranged << negatives[neg_index] if neg_index < negatives.size
-        neg_index += 1 if neg_index < negatives.size
-      end
+      arr[positive], arr[negative] = arr[negative], arr[positive]
+      
     end
-
-    rearranged.concat(positives[pos_index..-1])
-    rearranged.concat(negatives[neg_index..-1])
-
-    arr.replace(rearranged)
   end
 end
+
 
