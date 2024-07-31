@@ -8,5 +8,8 @@ class Analysis
     @monthly_budget = monthly_budget
   end
 
+  def total_expenses_for_month(month)
+    month.values_at(:rent_bill, :water_bill, :energy_bill, :internet_bill, :food).sum
+  end
 
 end
