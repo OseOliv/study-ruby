@@ -13,4 +13,10 @@ class Planner
   def initialize
     @participants = []
   end
+
+  def add_participant(participant)
+    @participants << participant
+  end
+
+  
 end
