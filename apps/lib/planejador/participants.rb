@@ -18,5 +18,14 @@ class Planner
     @participants << participant
   end
 
-  
+  def suggest_dates
+    return [] if @participants.empty?
+
+    all_dates = @participants.map(&:available_date)
+
+    ideal_dates = all_dates.reduce(:&)
+
+    ideal_dates
+  end
+
 end
