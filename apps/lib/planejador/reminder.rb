@@ -11,4 +11,12 @@ class Reminder
   def days_until_event
     (@event_date - Date.today).to_i
   end
+
+  def pending_tasks
+    @tasks.select { |task| !task_completed?(task)}
+  end
+
+  def task_completed?(task)
+    task.completed
+  end
 end
