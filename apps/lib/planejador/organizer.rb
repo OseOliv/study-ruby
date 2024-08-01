@@ -1,7 +1,8 @@
 class Task
-  attr_reader :description
-  def initialize(description)
+  attr_reader :description, :completed
+  def initialize(description, completed: false)
     @description = description
+    @completed = completed
   end
 end
 
@@ -26,5 +27,9 @@ class TaskOrganizer
       tasks_distribution[participant.name] << task.description
     end
     tasks_distribution
+  end
+
+  def complete!
+    @completed = true
   end
 end
