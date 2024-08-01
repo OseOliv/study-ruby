@@ -19,4 +19,14 @@ class Reminder
   def task_completed?(task)
     task.completed
   end
+
+  def send_notification
+    pending_tasks_message = pending_tasks.empty? ? "All tasks are completed!" : "Pending tasks: #{pending_tasks.map(&:description).join(', ')}"
+
+    @participants.each do |participant|
+      send_notification(participant, days_until_event, pending_tasks_message)
+    end
+  end
+
+  
 end
