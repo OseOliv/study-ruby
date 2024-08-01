@@ -8,4 +8,7 @@ class Reminder
     @participants = participants
   end
 
+  def days_until_event
+    (@event_date - Date.today).to_i
+  end
 end
