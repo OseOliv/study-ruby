@@ -8,3 +8,9 @@ class Participants
     @available_date = available_date
   end
 end
+
+class Planner
+  def initialize
+    @participants = []
+  end
+end
