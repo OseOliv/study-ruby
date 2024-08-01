@@ -1,15 +1,16 @@
 # frozen_string_literal: true
 
-class Participants
-  attr_accessor :name, :available_date
+class Participant
+  attr_accessor :name, :available_dates
 
-  def initialize(name, available_date)
+  def initialize(name, available_dates)
     @name = name
-    @available_date = available_date
+    @available_dates = available_dates
   end
 end
 
-class Planner
+class IdealDates
+
   def initialize
     @participants = []
   end
@@ -21,11 +22,11 @@ class Planner
   def suggest_dates
     return [] if @participants.empty?
 
-    all_dates = @participants.map(&:available_date)
+    all_dates = @participants.map(&:available_dates)
 
     ideal_dates = all_dates.reduce(:&)
 
     ideal_dates
   end
-
 end
+
