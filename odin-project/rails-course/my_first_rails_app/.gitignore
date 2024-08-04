@@ -1,0 +1,9 @@
+# Arquivos temporários
+*.log
+*.tmp
+*.swp
+
+# Diretórios de cache
+tmp/
+log/
+.cache/
