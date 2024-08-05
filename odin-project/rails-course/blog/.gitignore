@@ -11,3 +11,8 @@ db/*.sqlite3-journal
 vendor/bundle
 tmp/
 public/assets/
+# Ignorar pastas de shared memory
+shm/
+
+# Ignorar pastas de write-ahead logging
+wal/
