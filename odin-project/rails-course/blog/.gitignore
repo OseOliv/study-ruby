@@ -16,3 +16,8 @@ shm/
 
 # Ignorar pastas de write-ahead logging
 wal/
+*wal
+*shm
+
+*.sqlite3-shm
+*.sqlite3-wal
