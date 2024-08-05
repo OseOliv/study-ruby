@@ -16,3 +16,5 @@ shm/
 
 # Ignorar pastas de write-ahead logging
 wal/
+*wal
+*shm
