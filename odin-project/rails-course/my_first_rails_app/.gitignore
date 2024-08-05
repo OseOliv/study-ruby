@@ -7,3 +7,7 @@
 tmp/
 log/
 .cache/
+
+# Arquivos temporários do SQLite
+/storage/development.sqlite3-shm
+/storage/development.sqlite3-wal
